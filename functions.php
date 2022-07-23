@@ -85,3 +85,22 @@ add_action('wp_enqueue_scripts','elzero_added_scripts');
 //      }
 //      return $atts;
 // }
+
+
+
+/**
+ * Customize The Excerpt Word Length & Read More Dots
+ * Added by @Yassine
+ */
+
+ function elzero_extends_excerpt_length($length){
+    return 86;
+ }
+
+ add_filter('excerpt_length','elzero_extends_excerpt_length');
+
+ function elzero_exceprt_change_dots($more){
+    return ' ...';
+ }
+
+ add_filter('excerpt_more','elzero_exceprt_change_dots');

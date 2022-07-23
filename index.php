@@ -19,10 +19,20 @@
                                 <?php the_excerpt(); ?>
                             </p>
                             <hr>
-                            <p class="categories">
+                            <p class="post-categories">
                                 <i class="fa-solid fa-tags"></i>                    
                                         <?php the_category( ', ' ); ?>
                             </p>
+                            <p class="post-tags">
+                                <?php 
+                                     if (has_tag()) {
+                                         the_tags();
+                                     }else {
+                                        echo 'Tags: There\'s No Tags';
+                                     }
+                                 ?>
+                            </p>
+                                
                         </div>
                     </div>       
                   <?php        
